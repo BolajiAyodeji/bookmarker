@@ -64,7 +64,7 @@ function fetchBookmarks() {
     bookmarksResult.innerHTML += '<div class="card card-body bg-light">'
                                 + '<h3 class="name">'
                                 + name
-                                + '<a class="btn btn-default link" target="_blank" href="'+addhttps(url)+'">Visit site</a>'
+                                + '<a class="btn btn-default link" target="_blank" href="'+ url +'">Visit site</a>'
                                 + '<a onclick="deleteBookmark(\''+ url +'\')" class="btn btn-danger del-link" href="#">Delete</a>'
                                 + '</h3>'
                                 + '</div>';
@@ -87,12 +87,4 @@ function validateForm(siteName, siteUrl) {
   }
 
   return true;
-}
-
-// add https to Urls
-function addhttps(url) {
-  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
-      url = "https://" + url;
-  }
-  return url;
 }
