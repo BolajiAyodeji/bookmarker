@@ -10,6 +10,19 @@ body {
 hr {
   padding-bottom: 10px;
 }
+.btn-default {
+  background-color: #ddd;
+  margin: 10px;
+}
+.btn-default:hover {
+  background-color: #eee;
+}
+.name {
+  font-size: 20px;
+}
+.link {
+  font-size: 15px;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
