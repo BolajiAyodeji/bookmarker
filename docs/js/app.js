@@ -57,6 +57,9 @@ function fetchBookmarks() {
   // build output
   bookmarksResult.innerHTML='';
 
+  if (localStorage.getItem('bookmarks') === null) {
+
+  } else {
   for (let i = 0; i < bookmarks.length; i++) {
     let name = bookmarks[i].name;
     let url = bookmarks[i].url;
@@ -68,6 +71,7 @@ function fetchBookmarks() {
                                 + '<a onclick="deleteBookmark(\''+ url +'\')" class="btn btn-danger del-link" href="#">Delete</a>'
                                 + '</h3>'
                                 + '</div>';
+   }
   }
 }
 
